@@ -1,5 +1,5 @@
 // import './App.css'
-import Navbar from './components'
+import { Navbar } from './components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Cart, LoginSignUp, Product, Shop, ShopCategory } from './pages'
 

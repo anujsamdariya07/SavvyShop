@@ -25,3 +25,15 @@ Your one stop solution for purchasing all of your daily requirements.
 10. In App.jsx, set up routes.
 
 11. Make another component Home.
+
+12. Mount Home component in Shop.jsx
+
+13. Make a component Item with Item.jsx and item.css
+
+14. Make a component Popular with Popular.jsx and popular.css
+
+15. Here, import the data_product from assets and use its values in Item component in Popular.jsx
+
+16. Mount Popular in Shop
+
+17. Make another component Offers. Mount in Shop. 
