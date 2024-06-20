@@ -36,4 +36,10 @@ Your one stop solution for purchasing all of your daily requirements.
 
 16. Mount Popular in Shop
 
-17. Make another component Offers. Mount in Shop. 
+17. Make another component Offers. Mount it in Shop. 
+
+18. Make another component NewCollections. Mount Item component in it. Mount NewCollections in Shop. 
+
+19. Make another component NewsLetter. Mount it in Shop. 
+
+20. Make another component Footer. Mount it in Shop. 
