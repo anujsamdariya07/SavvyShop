@@ -6,5 +6,7 @@ import Offers from './Offers/Offers';
 import NewCollections from './NewCollections/NewCollections';
 import NewsLetter from './NewsLetter/NewsLetter';
 import Footer from './Footer/Footer';
+import BreadCrum from './BreadCrum/BreadCrum';
+import DescriptionBox from './DescriptionBox/DescriptionBox';
 
-export { Navbar, Home, Item, Popular, Offers, NewCollections, NewsLetter, Footer };
+export { Navbar, Home, Item, Popular, Offers, NewCollections, NewsLetter, Footer, BreadCrum, DescriptionBox };
