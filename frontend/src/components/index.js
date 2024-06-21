@@ -8,5 +8,7 @@ import NewsLetter from './NewsLetter/NewsLetter';
 import Footer from './Footer/Footer';
 import BreadCrum from './BreadCrum/BreadCrum';
 import DescriptionBox from './DescriptionBox/DescriptionBox';
+import RelatedProducts from './RelatedProducts/RelatedProducts';
+import CartItems from './CartItems/CartItems';
 
-export { Navbar, Home, Item, Popular, Offers, NewCollections, NewsLetter, Footer, BreadCrum, DescriptionBox };
+export { Navbar, Home, Item, Popular, Offers, NewCollections, NewsLetter, Footer, BreadCrum, DescriptionBox, RelatedProducts, CartItems };
