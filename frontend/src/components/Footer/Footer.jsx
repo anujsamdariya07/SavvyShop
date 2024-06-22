@@ -7,7 +7,7 @@ import whatsapp_icon from '../assets/whatsapp_icon.png'
 
 function Footer() {
   return (
-    <div className='footer'>
+    <div className='footer unselectable'>
       <div className="footer-logo">
         <img src={footer_logo} alt="" />
         <p>SavvyShop</p>

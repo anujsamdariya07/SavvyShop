@@ -31,3 +31,21 @@
   margin-top: 50px;
   gap: 30px;
 }
+
+@media screen and (max-width: 500px) {
+  .item {
+    width: 80%;
+  }
+  .item img {
+    width: 80%;
+  }
+  .collections {
+    grid-template-columns: 1fr 1fr;
+  }
+  .newCollections h1 {
+    font-size: 30px;
+  }
+  .newCollections hr {
+    width: 150px;
+  }
+}

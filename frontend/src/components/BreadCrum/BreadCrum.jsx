@@ -4,7 +4,7 @@ import arrow_icon from '../assets/breadcrum_arrow.png'
 
 function BreadCrum({ product }) {
   return (
-    <div className='breadCrum'>
+    <div className='breadCrum unselectable'>
       HOME <img src={arrow_icon} alt="" /> SHOP <img src={arrow_icon} alt="" /> {product.category} <img src={arrow_icon} alt="" /> {product.name}
     </div>
   )
