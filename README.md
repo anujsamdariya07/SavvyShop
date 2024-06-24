@@ -102,3 +102,19 @@ Your one stop solution for purchasing all of your daily requirements.
 47. Run command: npm install cors
 
 48. Make a file index.js and import all the packages
+
+49. connect with mongodb
+
+50. Use following middlewares: app.use(express.json());, app.use(cors());
+
+51. Make a basic get request and listen at any port
+
+52. Make a folder upload and then images inside it and then use multer to store images in it.
+
+53. Make a schema for storing data  in MongoDB
+
+54. Test it. Similarly for deleting product
+
+55. Now move to Admin folder
+
+56. Make react app there
