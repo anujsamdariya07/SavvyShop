@@ -7,7 +7,7 @@
 
 .loginSignUp-container {
   width: 580px;
-  height: 600px;
+  height: auto;
   background: white;
   margin: auto;
   padding: 40px 60px;
@@ -56,6 +56,7 @@
 .loginSignUp-login span {
   color: #ff4141;
   font-weight: 600;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1280px) {

@@ -217,11 +217,19 @@ app.post('/login', async (req, res) => {
       const token = jwt.sign(data, 'secret_ecom');
       res.json({ success: true, token: token });
     } else {
-      res.status(401).json({success: false, msg: 'Wrong Password!'})
+      res.status(401).json({ success: false, msg: 'Wrong Password!' });
     }
   } else {
-    res.status(403).json({success: false, msg: 'User does not exist!'})
+    res.status(403).json({ success: false, msg: 'User does not exist!' });
   }
+});
+
+// Creating api for new collection data
+app.get('/newcollections', async (req, res) => {
+  let products = await Product.find({});
+  let newCollection = products.slice(1).slice(-8);
+  console.log('New Collection Fetched')
+  res.send(newCollection)
 });
 
 const port = 4000;
