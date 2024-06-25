@@ -52,6 +52,10 @@ const Product = mongoose.model('Product', {
     type: Number,
     required: true,
   },
+  name: {
+    type: String,
+    required: true,
+  },
   key: {
     type: String,
   },
