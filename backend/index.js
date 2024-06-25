@@ -140,6 +140,90 @@ app.get('/allproducts', async (req, res) => {
   res.send(products);
 });
 
+// Schema creation for user model
+const User = mongoose.model('User', {
+  name: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    unique: true,
+  },
+  password: {
+    type: String,
+  },
+  cartData: {
+    type: Object,
+  },
+  date: {
+    type: Date,
+    default: Date.now(),
+  },
+});
+
+// Creating endpoint for registering the user
+app.post('/signup', async (req, res) => {
+  const { email, name, password } = req.body;
+  let check = await User.findOne({ email: email });
+  if (check) {
+    return res.status(400).json({
+      success: false,
+      msg: 'Email already exists',
+    });
+  }
+
+  let cart = {};
+  for (let i = 0; i < 300; i++) {
+    cart[i] = 0;
+  }
+
+  const user = new User({
+    name: name,
+    email: email,
+    password: password,
+    cartData: cart,
+  });
+
+  await user.save();
+
+  const data = {
+    user: {
+      id: user.id,
+    },
+  };
+
+  const token = jwt.sign(data, 'secret_ecom');
+  res.json({
+    success: true,
+    token: token,
+  });
+});
+
+// Creating endpoint for user login
+app.post('/login', async (req, res) => {
+  const { email, password } = req.body;
+
+  let user = await User.findOne({ email: email });
+
+  if (user) {
+    const passCompare = password === user.password;
+    if (passCompare) {
+      const data = {
+        user: {
+          id: user.id,
+        },
+      };
+      const token = jwt.sign(data, 'secret_ecom');
+      res.json({ success: true, token: token });
+    } else {
+      res.status(401).json({success: false, msg: 'Wrong Password!'})
+    }
+  } else {
+    res.status(403).json({success: false, msg: 'User does not exist!'})
+  }
+});
+
 const port = 4000;
 
 app.listen(port, (error) => {
