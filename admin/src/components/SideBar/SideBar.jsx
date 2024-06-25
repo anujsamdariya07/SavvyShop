@@ -6,7 +6,7 @@ import addlistProductIcon from '../../assets/Product_list_icon.svg'
 
 function SideBar() {
   return (
-    <div className='sideBar'>
+    <div className='sideBar unselectable'>
       <Link to={'/addproduct'} style={{textDecoration: 'none'}}>
         <div className="sidebar-item">
           <img src={addProductIcon} alt="" />

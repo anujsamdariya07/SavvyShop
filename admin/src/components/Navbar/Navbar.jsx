@@ -5,7 +5,7 @@ import navProfile from '../../assets/nav-profile.svg'
 
 function Navbar() {
   return (
-    <div className='navbar'>
+    <div className='navbar unselectable'>
       <img src={navLogo} alt="" className='nav-logo' />
       <img src={navProfile} alt="" className='nav-profile' />
     </div>
